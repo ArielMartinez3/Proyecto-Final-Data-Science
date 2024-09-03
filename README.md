@@ -51,33 +51,96 @@ El “Adult” dataset, también conocido como “Census Income” dataset, es u
 * Construir un modelo de clasificación preciso para predecir el ingreso.
 * Visualizaciones claras y concisas que respalden los hallazgos.
 
+## Conclusiones Gráficos
+
+### Histograma del Nivel Educativo
+- La mayoría de las personas tienen entre 9 y 12 años de educación, con el punto más alto en 10 años, que corresponde a la finalización de la secundaria (high school).
+- En promedio, las personas en el dataset tienen poco más de 10 años de educación.
+- La visualización muestra que la mayoría de los individuos han completado la secundaria, con una mayor representación de niveles educativos superiores que los de menor educación.
+
+### Gráfico de Barras de Ingresos por Ocupación
+- Las ocupaciones como "Ejecutivo" y "Profesional" tienen más personas con ingresos altos.
+- Ocupaciones como "Limpiador" y "Servicios domésticos" tienen menos personas con ingresos altos.
+- Algunas ocupaciones tienen una mezcla de ingresos altos y bajos, como "Ventas" y "Reparación".
+- El gráfico muestra que las ocupaciones pueden influir en el nivel de ingresos, con algunos trabajos claramente asociados con mejores salarios que otros.
+
+### Scatterplot: Años de Educación vs Capital Ganado
+- No hay una tendencia clara en cómo el capital ganado cambia con más años de educación. La relación parece débil, como lo indica la baja correlación de 0.12. La mayoría de los puntos están cerca del eje horizontal, indicando que el capital ganado es bajo para muchos con distintos niveles educativos.
+- Aunque el capital ganado a partir de los 9 años de educación es levemente superior al de los grupos de menor educación, lo que puede sugerir cierta influencia, la distribución de ingresos sigue siendo muy variada.
+- No parece haber una relación fuerte entre los años de educación y el capital ganado en el dataset.
+
+### Boxplot: Horas Trabajadas por Semana según el Sexo
+- Los hombres tienden a trabajar más horas a la semana en comparación con las mujeres, con una media de 42.4 horas frente a 36.4 horas.
+- El rango de horas trabajadas es más amplio para los hombres, con una mayor variabilidad.
+- Las medianas (líneas dentro de las cajas) son iguales para ambos sexos (40 horas), pero las mujeres tienen una distribución más concentrada en torno a esta mediana.
+
+### Pairplot de Variables Seleccionadas
+Este gráfico muestra cómo se relacionan entre sí cuatro variables importantes: edad, años de educación, horas trabajadas por semana e ingresos.
+- **Observaciones:**
+  - **Edad y Educación:** No parece haber una relación clara entre la edad y los años de educación.
+  - **Edad y Horas Trabajadas:** Los ingresos más altos tienden a estar asociados con un mayor número de horas trabajadas.
+  - **Educación y Horas Trabajadas:** Las personas con más educación tienden a trabajar más horas.
+  - **Ingreso:** Las personas con ingresos más altos tienden a tener más educación y trabajar más horas.
+
+### Gráfico de Dispersión Multivariado
+- Las personas con más edad tienden a trabajar menos horas por semana. Esto puede ser porque los trabajos suelen ser menos demandantes para los trabajadores mayores.
+- Los puntos más grandes, que indican un mayor nivel educativo, están más relacionados con el aumento en las horas trabajadas y los ingresos más altos.
+- Los puntos en colores más cálidos (indicando ingresos más altos) tienden a tener más educación y a trabajar más horas por semana.
+- El gráfico muestra que los trabajadores más educados y con mayores ingresos tienden a trabajar más horas y tienen un rango de edad más variado. Además, los trabajadores mayores suelen trabajar menos horas.
+
+### Distribución de Ocupaciones
+- Las ocupaciones más frecuentes son "Prof-specialty" (profesionales especializados), "Craft-repair" (trabajos de reparación y mantenimiento), y "Exec-managerial" (gestión ejecutiva).
+- Las ocupaciones menos comunes incluyen "Armed-Forces" (fuerzas armadas) y "Priv-house-serv" (servicios domésticos privados).
+
+### Distribución de Ingresos por Género
+- Hay una notable mayor proporción de hombres con ingresos superiores a 50K en comparación con las mujeres.
+- La proporción de ingresos inferiores a 50K se distribuye de una manera mucho más similar en ambos géneros.
+
+## Distribución de Ocupaciones por Género
+
+1. **Ocupaciones con Alta Proporción de Hombres:**
+   - Ocupaciones como "Exec-managerial", "Craft-repair", y "Transport-moving" tienen una representación significativamente mayor de hombres.
+   - Estas ocupaciones suelen estar asociadas con mayores ingresos. Por ejemplo, "Exec-managerial" tiene una alta probabilidad de ingresos superiores a 50K, lo que coincide con la alta representación masculina.
+
+2. **Ocupaciones con Alta Proporción de Mujeres:**
+   - Ocupaciones como "Other-service" y "Priv-house-serv" tienen una mayor cantidad de mujeres.
+   - Estas ocupaciones tienden a tener una menor proporción de ingresos superiores a 50K. La ocupación "Other-service", en particular, tiene una alta representación femenina y una baja proporción de ingresos altos.
+
+3. **Ocupaciones con Baja Representación Femenina:**
+   - "Craft-repair" y "Protective-serv" tienen muy pocas mujeres en comparación con los hombres.
+   - Estas ocupaciones también están asociadas con una variedad de niveles de ingresos, pero "Craft-repair" en particular tiende a tener una mayor proporción de ingresos altos.
+
+## Distribución de Ingresos según Años de Educación
+
+- A más años de educación, mayor porcentaje de personas con ingresos >50K. Por ejemplo, el 74% de quienes tienen 16 años de educación ganan más de 50K, frente al 0% con solo 1 año.
+- Los porcentajes de ingresos altos aumentan notablemente a partir de 9 años de educación, alcanzando niveles críticos en educación universitaria.
+- Los niveles educativos avanzados (13 años o más) muestran los mayores porcentajes de ingresos >50K, destacando la educación universitaria como clave para mayores ingresos.
+- Para niveles educativos bajos (hasta 7 años), la mayoría tiene ingresos menores a 50K, indicando que una educación mínima limita las oportunidades de altos ingresos.
+
 ## Resultados obtenidos 
 
 ### Diferencias en Ingresos entre Géneros
-- **Ingresos:** Los hombres tienen una mayor probabilidad de tener ingresos superiores a 50K en comparación con las mujeres.
-- **Variabilidad:** La variabilidad en los ingresos es mayor entre los hombres.
-- **Horas Trabajadas:** Los hombres trabajan en promedio 42.43 horas por semana, mientras que las mujeres trabajan 36.41 horas por semana.
-- **Conclusión:** La diferencia en las horas trabajadas puede contribuir a las diferencias de ingresos observadas entre géneros.
+- Los hombres tienen una mayor probabilidad de tener ingresos superiores a 50K en comparación con las mujeres.
+- Los hombres trabajan en promedio 42.43 horas por semana, mientras que las mujeres trabajan 36.41 horas por semana.
+- El análisis muestra que hay una correlación entre la representación de género en diferentes ocupaciones y la diferencia salarial. Las ocupaciones dominadas por hombres tienden a ofrecer mayores ingresos, mientras que las ocupaciones dominadas por mujeres suelen ofrecer salarios más bajos. 
+- Esta diferencia en la distribución de género en ocupaciones específicas contribuye a la brecha salarial observada entre hombres y mujeres en el dataset.
 
-### Datos Demográficos Generales
-- **Edad Promedio:** La edad promedio en el dataset es de casi 39 años.
-- **Educación Promedio:** La educación promedio se acerca al nivel secundario completo, con 10.08 años de educación.
-- **Horas Trabajadas:** La mayoría de las personas trabajan alrededor de 40 horas por semana.
-- **Ingresos:** Una proporción significativa de la población tiene ingresos inferiores a 50K.
+**Conclusión:** La diferencia en las horas trabajadas puede contribuir a las diferencias de ingresos observadas entre géneros, y también hay una correlación con la representación de ambos géneros en ciertas ocupaciones.
+
+### Relación entre ocupación e ingreso
+- Algunas ocupaciones, como "Exec-managerial" y "Prof-specialty", pueden mostrar una alta proporción de personas con ingresos mayores a 50K. Estas ocupaciones suelen estar asociadas con altos niveles de responsabilidad y especialización, lo que puede justificar los altos ingresos.
+- Ocupaciones como "Adm-clerical" y "Other-service" pueden tener una baja proporción de personas con ingresos superiores a 50K. Estas ocupaciones a menudo están asociadas con roles de apoyo o servicios, que típicamente tienen menores salarios comparados con roles de gestión o profesionales especializados.
+- La distribución de ingresos según ocupación puede resaltar disparidades salariales entre diferentes tipos de trabajos. Por los resultados obtenidos anteriormente, es probable que las ocupaciones que requieren más educación y experiencia estén mejor remuneradas en comparación con trabajos que no requieren tales calificaciones.
+- El análisis y visualización ayudan a identificar patrones en cómo diferentes ocupaciones están relacionadas con el nivel de ingresos, proporcionando una visión clara sobre la disparidad salarial en el dataset.
 
 ### Relación entre Nivel Educativo e Ingresos
-- **Educación y Ingresos:** Hay una relación positiva entre el nivel educativo y la probabilidad de obtener ingresos superiores a 50K. A medida que aumentan los años de educación, también aumenta la probabilidad de tener ingresos más altos.
-- **Nivel Educativo Promedio:** 10.08 años.
-- **Porcentaje con Ingresos > 50K:** 24% de la población.
+- Hay una estrecha relación entre el nivel educativo y la probabilidad de obtener ingresos superiores a 50K. A medida que aumentan los años de educación, también aumenta la probabilidad de tener ingresos más altos.
+- Los niveles educativos avanzados (13 años o más) muestran los mayores porcentajes de ingresos >50K, destacando la educación universitaria como clave para mayores ingresos.
+- Porcentaje de personas con ingresos mayores a 50K y más de 12 años de educación: 52.58%
+- Porcentaje de personas con ingresos mayores a 50K que tienen más de 12 años de educación: 76.15%
+- Porcentaje con Ingresos mayores a 50K: 24% de la población.
 
-### Influencia de la Ocupación en los Ingresos
-- **Ocupaciones con Altos Ingresos:** "Exec-managerial" y "Prof-specialty" están asociadas con un mayor porcentaje de personas con ingresos superiores a 50K.
-- **Ocupaciones con Bajos Ingresos:** "Other-service" y "Priv-house-serv" tienen una proporción significativamente menor de personas con ingresos superiores a 50K.
-- **Conclusión:** Los roles en gestión y especialización profesional muestran mayores probabilidades de ingresos altos.
 
-### Distribución de Ocupaciones
-- **Ocupación Más Común:** La mayoría de los trabajadores están empleados en ocupaciones profesionales, con "Prof-specialty" siendo la ocupación más común.
-- **Ocupaciones Menos Comunes:** Las ocupaciones menos comunes incluyen trabajos en las fuerzas armadas y servicios domésticos.
 
 
 
