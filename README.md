@@ -1,4 +1,4 @@
-# README: ProyectoDS_Final_Martinez
+# README: Insight de Ingresos: Predicción con Datos Censales con ML
 
 ## Introducción
 Este proyecto tiene como objetivo analizar la relación entre el nivel educativo, la ocupación, las horas trabajadas y los ingresos. Se buscará responder a preguntas clave sobre la distribución de ingresos y cómo se ven influenciados por diferentes factores socioeconómicos.
